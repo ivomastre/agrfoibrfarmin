@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-7">
+    <title>Title</title>
+    <button onclick="myFunction()"id = "btn" type="button">Click Me!</button>
+    <input type="text" id = "myInput" name="fname"><br>
+
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    function myFunction() {
+        var inputVal = document.getElementById("myInput").value;
+        //var xhttp = new XMLHttpRequest();
+        var ifrm = document.createElement("iframe");
+        ifrm.setAttribute("src", "/show_frame/"+inputVal);
+        ifrm.style.width = "640px";
+        ifrm.style.height = "480px";
+        document.body.appendChild(ifrm);
+
+
+        /*xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                alert(this.responseText)
+                var ifrm = document.createElement("iframe");
+                ifrm.setAttribute("src", "javascript:'"+this.responseText+"'" );
+                ifrm.style.width = "640px";
+                ifrm.style.height = "480px";
+                document.body.appendChild(ifrm);
+            }
+        };
+        xhttp.open("GET", "/frame/"+inputVal, true);
+        xhttp.send();
+        */
+    }
+</script>
+</html>
